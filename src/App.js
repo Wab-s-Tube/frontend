@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import { Routes } from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
 
 // components
 import Header from "./components/Header";
@@ -11,9 +11,11 @@ function App() {
   return (
     <>
       <Header />
-        <Routes>
-          <Route path="/" element={<Landing />}
-        </Routes>
+
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
+
       <Footer />
     </>
   );
