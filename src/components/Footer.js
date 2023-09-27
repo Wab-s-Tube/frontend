@@ -1,8 +1,8 @@
 import React from "react";
 
-const Header = () => {
+const Footer = () => {
 
     
 }
 
-export default Header;
+export default Footer;
