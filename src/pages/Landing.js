@@ -9,18 +9,15 @@ const Landing = () => {
       backgroundPosition: "center center",
       backgroundRepeat: "no-repeat",
       width: "100vw", // Set width to viewport width
-      height: "100vh", // Set height to viewport height
+      height: "100vh", // Set height to viewport height'
     };
 
   return (
-
-    <div className="landing-page">
-
-        <div className="full-screen-image"
-        style={styles}></div>
-
-    </div>
-
+    <>
+      <div className="landing">
+        <div className="full-screen-image" style={styles}></div>
+      </div>
+    </>
   );
 };
 
