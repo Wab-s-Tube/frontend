@@ -32,7 +32,7 @@
     transition: transform 0.3s ease-in-out;
 }
     
-.fade-in-overlay-enter {
+/* .fade-in-overlay-enter {
     background-color: rgba(0, 0, 0, 0);
 }
     
@@ -48,7 +48,7 @@
 .fade-in-overlay-exit-active {
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.3s ease-in-out;
-}
+} */
 
 .menu-content {
     position: fixed;
@@ -65,4 +65,10 @@
     height: 100%;
     top: 0;
     left: 250px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.overlay.active {
+    background-color: rgba(0, 0, 0, 0.5);
 }

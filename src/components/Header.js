@@ -38,11 +38,7 @@ const Header = () => {
               unmountOnExit
             >
               <div>
-                {/* <div className="overlay" onClick={menuToggle}></div> */}
-                <div
-                  className={`menu-content ${openMenu ? "menu-open" : ""}`}
-                  ref={menuRef}
-                >
+                <div className="menu-content" ref={menuRef}>
                   <header>Wab Tube</header>
                   <ul>
                     <li>Test 1</li>
@@ -52,6 +48,7 @@ const Header = () => {
                 </div>
               </div>
             </CSSTransition>
+            <div className={`overlay ${openMenu ? "active" : ""}`}></div>
           </Nav>
         </Navbar>
       </div>
