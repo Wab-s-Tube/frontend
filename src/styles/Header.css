@@ -10,11 +10,12 @@
 .slide-in-menu-enter {
     position: fixed;
     top: 0;
+    left: 0;
     transform: translateX(-250px);
 }
 
 .slide-in-menu-enter-active {
-    transform: translateX(-12px);
+    transform: translateX(0px);
     transition: transform .3s ease-in-out;
  
 }
