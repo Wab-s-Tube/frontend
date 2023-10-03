@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Navbar, Nav, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
+import { Navbar, Nav } from "reactstrap";
 import { CSSTransition } from "react-transition-group";
 import '../styles/Header.css'
 
@@ -7,6 +7,14 @@ const Header = () => {
 
   const [openMenu, setMenu] = useState(false)
   const menuRef = useRef(null)
+
+  const [searchTerm, setSearchTerm] = useState("")
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+
+    console.log(searchTerm);
+  }
 
   const menuToggle = () => {
     setMenu(!openMenu)
@@ -27,9 +35,9 @@ const Header = () => {
 
   return (
     <>
-
       <div className="header">
-        <Navbar id="header-nav">
+        <button className="button-menu" onClick={menuToggle}>Menu</button>
+        <Navbar id="header-nav-left">
           <Nav className="ml-auto" navbar>
             <CSSTransition
               in={openMenu}
@@ -58,10 +66,19 @@ const Header = () => {
                 <div className="overlay"></div>
               </div>
             </CSSTransition>
-
-            <button onClick={menuToggle}>Menu</button>
           </Nav>
         </Navbar>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <button type="submit" onClick={handleSearch}>
+            Search
+          </button>
+        </div>
       </div>
     </>
   );

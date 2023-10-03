@@ -7,6 +7,11 @@
 
 }
 
+.button-menu {
+  position: relative;
+  left: 0;
+}
+
 .slide-in-menu-enter {
     position: fixed;
     top: 0;
@@ -79,4 +84,28 @@
     left: 0;
     z-index: 0;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.search-bar {
+  position: fixed;
+  width: 100px;
+  top: 0;
+  left: 45%;
+  margin: 0 auto;
+}
+
+input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: -218px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
 }
