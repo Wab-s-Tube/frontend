@@ -70,12 +70,13 @@ const Header = () => {
         </Navbar>
         <div className="search-bar">
           <input
+            className="search-input"
             type="text"
             placeholder="Search..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button type="submit" onClick={handleSearch}>
+          <button className="search-button" type="submit" onClick={handleSearch}>
             Search
           </button>
         </div>
