@@ -27,10 +27,10 @@ const Header = () => {
 
   return (
     <>
+
       <div className="header">
         <Navbar id="header-nav">
           <Nav className="ml-auto" navbar>
-            <button onClick={menuToggle}>Menu</button>
             <CSSTransition
               in={openMenu}
               timeout={500}
@@ -48,7 +48,18 @@ const Header = () => {
                 </div>
               </div>
             </CSSTransition>
-            <div className={`overlay ${openMenu ? "active" : ""}`}></div>
+            <CSSTransition
+              in={openMenu}
+              timeout={500}
+              classNames="fade-in-overlay"
+              unmountOnExit
+            >
+              <div>
+                <div className="overlay"></div>
+              </div>
+            </CSSTransition>
+
+            <button onClick={menuToggle}>Menu</button>
           </Nav>
         </Navbar>
       </div>
