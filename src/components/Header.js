@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Navbar, Nav } from "reactstrap";
 import { CSSTransition } from "react-transition-group";
+import Youtube from '../assets/Youtube-logo.jpg'
 import '../styles/Header.css'
 
 const Header = () => {
@@ -36,38 +37,13 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <button className="button-menu" onClick={menuToggle}>Menu</button>
-        <Navbar id="header-nav-left">
-          <Nav className="ml-auto" navbar>
-            <CSSTransition
-              in={openMenu}
-              timeout={500}
-              classNames="slide-in-menu"
-              unmountOnExit
-            >
-              <div>
-                <div className="menu-content" ref={menuRef}>
-                  <header>Wab Tube</header>
-                  <ul>
-                    <li>Test 1</li>
-                    <li>Test 2</li>
-                    <li>Test 3</li>
-                  </ul>
-                </div>
-              </div>
-            </CSSTransition>
-            <CSSTransition
-              in={openMenu}
-              timeout={500}
-              classNames="fade-in-overlay"
-              unmountOnExit
-            >
-              <div>
-                <div className="overlay"></div>
-              </div>
-            </CSSTransition>
-          </Nav>
-        </Navbar>
+        <div className="left-side">
+          <img className="youtube-icon" src={Youtube} alt="YouTube Logo" />
+          <button className="button-menu" onClick={menuToggle}>
+            Menu
+          </button>
+        </div>
+
         <div className="search-bar">
           <input
             className="search-input"
@@ -76,10 +52,42 @@ const Header = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button className="search-button" type="submit" onClick={handleSearch}>
+          <button
+            className="search-button"
+            type="submit"
+            onClick={handleSearch}
+          >
             Search
           </button>
         </div>
+
+        <CSSTransition
+          in={openMenu}
+          timeout={500}
+          classNames="slide-in-menu"
+          unmountOnExit
+        >
+          <div>
+            <div className="menu-content" ref={menuRef}>
+              <header>Wab Tube</header>
+              <ul>
+                <li>Test 1</li>
+                <li>Test 2</li>
+                <li>Test 3</li>
+              </ul>
+            </div>
+          </div>
+        </CSSTransition>
+        <CSSTransition
+          in={openMenu}
+          timeout={500}
+          classNames="fade-in-overlay"
+          unmountOnExit
+        >
+          <div>
+            <div className="overlay"></div>
+          </div>
+        </CSSTransition>
       </div>
     </>
   );
