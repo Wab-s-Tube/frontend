@@ -38,7 +38,9 @@ const Header = () => {
     <>
       <div className="header">
         <div className="left-side">
-          <img className="youtube-icon" src={Youtube} alt="YouTube Logo" />
+          <a href="/">
+            <img className="youtube-icon" src={Youtube} alt="YouTube Logo" />
+          </a>
           <button className="button-menu" onClick={menuToggle}>
             Menu
           </button>
@@ -48,7 +50,7 @@ const Header = () => {
           <input
             className="search-input"
             type="text"
-            placeholder="Search..."
+            placeholder="Search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />

@@ -2,26 +2,27 @@
     position: fixed;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 56px;
     background-color: white;
 
 }
 
 .left-side {
-  display: flexbox;
+  display: flex;
   align-items: center;
 }
 
 .button-menu {
   position: fixed;
+  top: 11px;
   left: 1%;
-  top: 1.1%;
+
 }
 
 .youtube-icon {
   height: 45px;
-  margin-top: .1%;
-  margin-left: 5%;
+  margin-top: 3%;
+  margin-left: 150%;
 }
 
 .slide-in-menu-enter {
@@ -104,23 +105,22 @@
   align-items: center;
   position: fixed;
   left: 50%;
-  top: 1.1%;
-  z-index: -1000;
+  top: 8px;
+  z-index: 0;
   transform: translateX(-50%);
 }
 
 .search-input {
-  width: 250px;
+  width: 57vb;
+  height: 40px;
   margin-right: 0;
-  z-index: -1000;
+  border-radius: 50px;
 }
 
 .search-button {
-  position: fixed;
-  top: 1.1%;
   margin-left: 0;
-  z-index: -1000;
+  width: 8vb;
+  height: 40px;
   background-color: lightgray;
-  transform: translateX(155px);
 }
 
