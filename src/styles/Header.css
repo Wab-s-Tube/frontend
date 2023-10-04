@@ -1,28 +1,32 @@
 .header {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    height: 56px;
-    background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: white;
 
 }
 
 .left-side {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .button-menu {
   position: fixed;
   top: 11px;
   left: 1%;
-
 }
 
 .youtube-icon {
+  position: fixed;
   height: 45px;
-  margin-top: 3%;
-  margin-left: 150%;
+  top: .5%;
+  left: 8%;
 }
 
 .slide-in-menu-enter {
@@ -122,5 +126,35 @@
   width: 8vb;
   height: 40px;
   background-color: lightgray;
+}
+
+.mic-icon {
+  width: 40px;
+  margin-left: 2.5%;
+}
+
+.right-side{
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.create-icon{
+  position: fixed;
+  width: 20px;
+  right: 9%;
+}
+
+.bell-icon {
+  position: fixed;
+  right: 5.5%;
+  height: 35px;
+
+}
+
+.user-icon {
+  position: fixed;
+  right: 1.1%;
+  height: 40px;
 }
 

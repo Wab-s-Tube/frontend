@@ -1,7 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Navbar, Nav } from "reactstrap";
 import { CSSTransition } from "react-transition-group";
-import Youtube from '../assets/Youtube-logo.jpg'
+
+//assets
+import youtube from '../assets/Youtube-logo.jpg'
+import mic from '../assets/microphone.png'
+import create from '../assets/create.png'
+import user from "../assets/userIcon.png";
+import bell from "../assets/notification.png";
+
+//styles
 import '../styles/Header.css'
 
 const Header = () => {
@@ -39,7 +47,7 @@ const Header = () => {
       <div className="header">
         <div className="left-side">
           <a href="/">
-            <img className="youtube-icon" src={Youtube} alt="YouTube Logo" />
+            <img className="youtube-icon" src={youtube} alt="YouTube Logo" />
           </a>
           <button className="button-menu" onClick={menuToggle}>
             Menu
@@ -61,6 +69,13 @@ const Header = () => {
           >
             Search
           </button>
+          <img className="mic-icon" src={mic} alt="mic icon" />
+        </div>
+
+        <div className="right-side">
+          <img className="create-icon" src={create} alt="create icon" />
+          <img className="bell-icon" src={bell} alt="bell icon" />
+          <img className="user-icon" src={user} alt="user icon" />
         </div>
 
         <CSSTransition
