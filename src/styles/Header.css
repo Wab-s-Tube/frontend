@@ -29,7 +29,7 @@
   left: 6%;
 }
 
-.slide-in-menu-enter {
+.watch-menu-enter {
     position: fixed;
     top: 0;
     left: 0;
@@ -37,13 +37,13 @@
     transform: translateX(-250px);
 }
 
-.slide-in-menu-enter-active {
+.watch-menu-enter-active {
     transform: translateX(0px);
     transition: transform .3s ease-in-out;
  
 }
 
-.slide-in-menu-exit {
+.watch-menu-exit {
     position: fixed;
     top: 0;
     left: 0;
@@ -51,7 +51,7 @@
     transform: translateX(0px);
 }
 
-.slide-in-menu-exit-active {
+.watch-menu-exit-active {
     transform: translateX(-250px);
     transition: transform 0.3s ease-in-out;
 }

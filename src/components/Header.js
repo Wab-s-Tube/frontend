@@ -19,7 +19,6 @@ const Header = () => {
 
   const styling = currentPage.includes("search") ? "watch-menu" : "standard-menu"  
 
-  console.log("current styling is: " + styling);
   const [openMenu, setMenu] = useState(false)
   const menuRef = useRef(null)
 
@@ -89,7 +88,7 @@ const Header = () => {
         <CSSTransition
           in={openMenu}
           timeout={500}
-          classNames="slide-in-menu"
+          classNames={styling}
           unmountOnExit
         >
           <div>
