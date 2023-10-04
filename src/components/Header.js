@@ -62,13 +62,15 @@ const Header = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button
-            className="search-button"
-            type="submit"
-            onClick={handleSearch}
-          >
-            Search
-          </button>
+          <a href="/search">
+            <button
+              className="search-button"
+              type="submit"
+              onClick={handleSearch}
+            >
+              Search
+            </button>
+          </a>
           <img className="mic-icon" src={mic} alt="mic icon" />
         </div>
 
