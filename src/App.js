@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 // pages
 import Landing from "./pages/Landing";
+import Search from "./pages/Search"
 
 
 
@@ -18,6 +19,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
 
       <Footer />
