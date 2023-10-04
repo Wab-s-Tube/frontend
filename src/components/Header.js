@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Navbar, Nav } from "reactstrap";
 import { CSSTransition } from "react-transition-group";
+import { useLocation } from "react-router-dom";
 
 //assets
 import youtube from '../assets/Youtube-logo.jpg'
@@ -14,6 +15,11 @@ import '../styles/Header.css'
 
 const Header = () => {
 
+  const currentPage = useLocation().pathname
+
+  const styling = currentPage.includes("search") ? "watch-menu" : "standard-menu"  
+
+  console.log("current styling is: " + styling);
   const [openMenu, setMenu] = useState(false)
   const menuRef = useRef(null)
 
