@@ -1,28 +1,25 @@
 import React from "react";
 import TestingImage from "../assets/TestingImage.jpeg";
 import '../styles/Landing.css'
+import { useAppContext } from "../AppContext";
 
 const Landing = () => {
 
-    const styles = {
-      backgroundImage: `url(${TestingImage})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center center",
-      backgroundRepeat: "no-repeat",
-      width: "100vw", // Set width to viewport width
-      height: "100vh", // Set height to viewport height'
-    };
+  const {openMenu} = useAppContext()
+
+  const styling = openMenu ? "open" : "closed"
+
 
   return (
     <>
-      <div className="landing">
-        {/* <div className="full-screen-image" style={styles}></div> */}
-        <div className="left-menu">
+      <div className={"landing-" + styling}>
+        <div className="main-list">
           <ul>
-            <li>Home</li>
+            <li>Test 1</li>
+            <li>Test 2</li>
+            <li>Test 3</li>
           </ul>
         </div>
-        <div className="main-list"></div>
       </div>
     </>
   );

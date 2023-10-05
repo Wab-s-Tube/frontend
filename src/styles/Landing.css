@@ -1,7 +1,19 @@
-.landing {
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
+.landing-open {
+  position: fixed;
+  top: 56px;
+  left: 250px;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.landing-closed {
+  position: fixed;
+  top: 56px;
+  left: 72px;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
 }
 
 /* .left-menu {
@@ -13,7 +25,9 @@
 } */
 
 .main-list {
-background-color: black
+  font-size: 25px;
+  color: white;
+  background-color: black
 }
 
 ;

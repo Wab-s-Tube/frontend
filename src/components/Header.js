@@ -18,6 +18,7 @@ import hamburger from "../assets/hamburgerIcon.png"
 //styles
 import '../styles/Header.css'
 import '../styles/HeaderTran.css'
+import { useAppContext } from "../AppContext";
 
 // Notes for future work:
 //   Set menu as initially open when accessing the landing page
@@ -35,7 +36,8 @@ const Header = () => {
 
   const styling = currentPage.includes("search") ? "watch-menu" : "standard-menu"  
 
-  const [openMenu, setMenu] = useState(false)
+  const { openMenu, setMenu } = useAppContext()
+
   const menuRef = useRef(null)
 
   const [searchTerm, setSearchTerm] = useState("")
