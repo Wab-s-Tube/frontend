@@ -16,10 +16,22 @@
   background-color: black;
 }
 
-.main-list {
-  font-size: 25px;
-  color: white;
-  background-color: black
+.grid-container {
+  position: fixed;
+  display: grid;
+  top: 100px;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.video-thumb {
+  display: flexbox;
+  width: 382.31px;
+  height: 335.01px;
+  background-color: white;
+
 }
 
 ;
