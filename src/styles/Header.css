@@ -34,10 +34,10 @@
   position: fixed;
   height: 45px;
   top: 5.5px;
-  left: 6%;
+  left: 70px;
 }
 
-.menu-content {
+.watch-menu-content {
     position: fixed;
     width: 250px;
     height: 100vh;
@@ -45,6 +45,17 @@
     left: 0px;
     z-index: 1000;
     background-color: white;
+}
+
+.standard-menu-content {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  top: 56px;
+  left: 0px;
+  z-index: 1000;
+  background-color: white;
+
 }
 
 .overlay {

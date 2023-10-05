@@ -19,6 +19,16 @@ import hamburger from "../assets/hamburgerIcon.png"
 import '../styles/Header.css'
 import '../styles/HeaderTran.css'
 
+// Notes for future work:
+//   Set menu as initially open when accessing the landing page
+//   Setup side bar menue
+//   Fix search bar to be more accurate
+//   Establish "create" button functionality
+//   Establish "notification" button functionality
+//   Establish "user" button functionality
+
+
+
 const Header = () => {
 
   const currentPage = useLocation().pathname
@@ -41,7 +51,7 @@ const Header = () => {
   }
 
   const handleOutsideClick = (e) => {
-    if(menuRef.current && !menuRef.current.contains(e.target)){
+    if(menuRef.current && !menuRef.current.contains(e.target) && styling.includes("watch")){
       setMenu(false)
     }
   }
@@ -61,7 +71,11 @@ const Header = () => {
             <img className="youtube-icon" src={youtube} alt="YouTube Logo" />
           </a>
           <button className="button-menu" onClick={menuToggle}>
-            <img className= "hamburger-icon" src={hamburger} alt="hamburger icon" />
+            <img
+              className="hamburger-icon"
+              src={hamburger}
+              alt="hamburger icon"
+            />
           </button>
         </div>
 
@@ -91,6 +105,7 @@ const Header = () => {
           <img className="user-icon" src={user} alt="user icon" />
         </div>
 
+        {styling.includes("watch") ? "" :
         <div className="menu-bar">
           <a href="/">
             <img className="home-icon" src={home} alt="home icon" />
@@ -103,7 +118,8 @@ const Header = () => {
           <p className="subs-text">Subrcriptions</p>
           <img className="library-icon" src={library} alt="library icon" />
           <p className="library-text">Library</p>
-        </div>
+        </div> 
+        }
 
         <CSSTransition
           in={openMenu}
@@ -112,7 +128,7 @@ const Header = () => {
           unmountOnExit
         >
           <div>
-            <div className="menu-content" ref={menuRef}>
+            <div className={styling + "-content"} ref={menuRef}>
               <header>Wab Tube</header>
               <ul>
                 <li>Test 1</li>
@@ -122,16 +138,20 @@ const Header = () => {
             </div>
           </div>
         </CSSTransition>
-        <CSSTransition
-          in={openMenu}
-          timeout={500}
-          classNames={styling + "-overlay"}
-          unmountOnExit
-        >
-          <div>
-            <div className="overlay"></div>
-          </div>
-        </CSSTransition>
+        {styling.includes("watch") ? (
+          <CSSTransition
+            in={openMenu}
+            timeout={500}
+            classNames="watch-menu-overlay"
+            unmountOnExit
+          >
+            <div>
+              <div className="overlay"></div>
+            </div>
+          </CSSTransition>
+        ) : (
+          ""
+        )}
       </div>
     </>
   );
