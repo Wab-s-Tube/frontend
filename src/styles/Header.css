@@ -104,3 +104,79 @@
   height: 40px;
 }
 
+.menu-bar {
+  position: fixed;
+  top: 56px;
+  width: 72px;
+  height: 100vh;
+  background-color: white;
+}
+
+.home-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 56px;
+  left: 2.635px;
+  height: 50px;
+}
+
+.home-text{
+  position: fixed;
+  top: 105px;
+  left: 23.475px;
+  font-size: 9.34px;
+}
+
+.shorts-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 155px;
+  left: 25.985px;
+  height: 25px;
+}
+
+.shorts-text {
+  position: fixed;
+  top: 195px;
+  left: 22.945px;
+  font-size: 9.34px;
+}
+
+.subs-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 245px;
+  left: 23.5px;
+  height: 25px;
+}
+
+.subs-text {
+  position: fixed;
+  top: 286px;
+  left: 8.775px;
+  font-size: 9.34px;
+}
+
+.library-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 340px;
+  left: 23.5px;
+  height: 25px;
+}
+
+.library-text {
+  position: fixed;
+  top: 385px;
+  left: 22.04px;
+  font-size: 9.34px;
+}
+

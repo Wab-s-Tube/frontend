@@ -9,6 +9,10 @@ import mic from '../assets/microphone.png'
 import create from '../assets/create.png'
 import user from "../assets/userIcon.png";
 import bell from "../assets/notification.png";
+import home from "../assets/homeIcon.png"
+import shorts from "../assets/shortsIcon.png"
+import subs from "../assets/subcriptIcon.png"
+import library from "../assets/libraryIcon.png"
 
 //styles
 import '../styles/Header.css'
@@ -86,6 +90,20 @@ const Header = () => {
           <img className="user-icon" src={user} alt="user icon" />
         </div>
 
+        <div className="menu-bar">
+          <a href="/">
+            <img className="home-icon" src={home} alt="home icon" />
+            <p className="home-text">Home</p>
+          </a>
+          <img className="shorts-icon" src={shorts} alt="shorts icon" />
+          <p className="shorts-text">Shorts</p>
+          <p className="home-text">Home</p>
+          <img className="subs-icon" src={subs} alt="subcription icon" />
+          <p className="subs-text">Subrcriptions</p>
+          <img className="library-icon" src={library} alt="library icon" />
+          <p className="library-text">Library</p>
+        </div>
+
         <CSSTransition
           in={openMenu}
           timeout={500}
@@ -106,7 +124,7 @@ const Header = () => {
         <CSSTransition
           in={openMenu}
           timeout={500}
-          classNames= {styling + "-overlay"}
+          classNames={styling + "-overlay"}
           unmountOnExit
         >
           <div>
