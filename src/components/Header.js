@@ -105,21 +105,23 @@ const Header = () => {
           <img className="user-icon" src={user} alt="user icon" />
         </div>
 
-        {styling.includes("watch") ? "" :
-        <div className="menu-bar">
-          <a href="/">
-            <img className="home-icon" src={home} alt="home icon" />
+        {styling.includes("watch") ? (
+          ""
+        ) : (
+          <div className="menu-bar">
+            <a href="/login">
+              <img className="home-icon" src={home} alt="home icon" />
+              <p className="home-text">Home</p>
+            </a>
+            <img className="shorts-icon" src={shorts} alt="shorts icon" />
+            <p className="shorts-text">Shorts</p>
             <p className="home-text">Home</p>
-          </a>
-          <img className="shorts-icon" src={shorts} alt="shorts icon" />
-          <p className="shorts-text">Shorts</p>
-          <p className="home-text">Home</p>
-          <img className="subs-icon" src={subs} alt="subcription icon" />
-          <p className="subs-text">Subrcriptions</p>
-          <img className="library-icon" src={library} alt="library icon" />
-          <p className="library-text">Library</p>
-        </div> 
-        }
+            <img className="subs-icon" src={subs} alt="subcription icon" />
+            <p className="subs-text">Subrcriptions</p>
+            <img className="library-icon" src={library} alt="library icon" />
+            <p className="library-text">Library</p>
+          </div>
+        )}
 
         <CSSTransition
           in={openMenu}
@@ -131,7 +133,9 @@ const Header = () => {
             <div className={styling + "-content"} ref={menuRef}>
               <header>Wab Tube</header>
               <ul>
-                <li>Test 1</li>
+                <a href="/login">
+                  <li>Test 1</li>
+                </a>
                 <li>Test 2</li>
                 <li>Test 3</li>
               </ul>
