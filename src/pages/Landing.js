@@ -1,5 +1,6 @@
 import React from "react";
 import TestingImage from "../assets/TestingImage.jpeg";
+import '../styles/Landing.css'
 
 const Landing = () => {
 
@@ -15,7 +16,13 @@ const Landing = () => {
   return (
     <>
       <div className="landing">
-        <div className="full-screen-image" style={styles}></div>
+        {/* <div className="full-screen-image" style={styles}></div> */}
+        <div className="left-menu">
+          <ul>
+            <li>Home</li>
+          </ul>
+        </div>
+        <div className="main-list"></div>
       </div>
     </>
   );

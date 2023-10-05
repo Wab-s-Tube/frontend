@@ -1,0 +1,79 @@
+.watch-menu-enter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateX(-250px);
+}
+
+.watch-menu-enter-active {
+    transform: translateX(0px);
+    transition: transform .3s ease-in-out;
+
+}
+
+.watch-menu-exit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateX(0px);
+}
+
+.watch-menu-exit-active {
+    transform: translateX(-250px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.watch-menu-overlay-enter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.watch-menu-overlay-enter-active {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 100;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.watch-menu-overlay-exit {
+    opacity: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.watch-menu-overlay-exit-active {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+/* menu animation an any page */
+.standard-menu-enter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.standard-menu-enter-active {
+    transform: translateX(0px);
+
+}
+
+.standard-menu-exit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateX(0px);
+}
+
+.standard-menu-exit-active {
+    transform: translateX(-250px);
+}
+
