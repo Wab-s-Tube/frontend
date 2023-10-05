@@ -12,6 +12,7 @@ import bell from "../assets/notification.png";
 
 //styles
 import '../styles/Header.css'
+import '../styles/HeaderTran.css'
 
 const Header = () => {
 
@@ -105,7 +106,7 @@ const Header = () => {
         <CSSTransition
           in={openMenu}
           timeout={500}
-          classNames="fade-in-overlay"
+          classNames= {styling + "-overlay"}
           unmountOnExit
         >
           <div>
