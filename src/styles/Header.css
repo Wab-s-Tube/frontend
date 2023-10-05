@@ -18,14 +18,22 @@
 
 .button-menu {
   position: fixed;
-  top: 11px;
-  left: 1%;
+  top: 13px;
+  left: 21px;
+  border: none;
+  outline: none;
+  background: white;
+  padding: 0;
+}
+
+.hamburger-icon {
+  height: 30px;
 }
 
 .youtube-icon {
   position: fixed;
   height: 45px;
-  top: .5%;
+  top: 5.5px;
   left: 6%;
 }
 
@@ -79,7 +87,7 @@
   margin-left: 2.5%;
 }
 
-.right-side{
+.right-side {
   display: flex;
   align-items: center;
   margin-right: auto;
@@ -87,20 +95,23 @@
 
 .create-icon{
   position: fixed;
+  top: 21.01px;
   width: 20px;
-  right: 9%;
+  right: 118px;
 }
 
 .bell-icon {
   position: fixed;
-  right: 5.5%;
+  top: 10.5px;
+  right: 67px;
   height: 35px;
 
 }
 
 .user-icon {
   position: fixed;
-  right: 1.1%;
+  top: 8px;
+  right: 15px;
   height: 40px;
 }
 
@@ -168,14 +179,14 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 340px;
+  top: 335px;
   left: 23.5px;
   height: 25px;
 }
 
 .library-text {
   position: fixed;
-  top: 385px;
+  top: 380px;
   left: 22.04px;
   font-size: 9.34px;
 }

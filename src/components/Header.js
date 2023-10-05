@@ -13,6 +13,7 @@ import home from "../assets/homeIcon.png"
 import shorts from "../assets/shortsIcon.png"
 import subs from "../assets/subcriptIcon.png"
 import library from "../assets/libraryIcon.png"
+import hamburger from "../assets/hamburgerIcon.png"
 
 //styles
 import '../styles/Header.css'
@@ -60,7 +61,7 @@ const Header = () => {
             <img className="youtube-icon" src={youtube} alt="YouTube Logo" />
           </a>
           <button className="button-menu" onClick={menuToggle}>
-            Menu
+            <img className= "hamburger-icon" src={hamburger} alt="hamburger icon" />
           </button>
         </div>
 
