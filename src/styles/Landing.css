@@ -24,12 +24,13 @@
   height: 100vh;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
+  overflow-y: auto;
 }
 
 .video-thumb {
   display: flexbox;
-  width: 382.31px;
-  height: 335.01px;
+  width: 343.98px;
+  height: 333.48px;
   background-color: white;
 
 }

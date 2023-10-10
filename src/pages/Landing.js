@@ -11,7 +11,7 @@ const Landing = () => {
 
   const styling = openMenu ? "open" : "closed"
 
-const gridContainer = document.querySelector('.grid-container')
+  const gridContainer = document.querySelector('.grid-container')
 
   const test = [
     "1",
@@ -27,10 +27,7 @@ const gridContainer = document.querySelector('.grid-container')
     "11",
     "12",
     "13",
-    ,
     "14",
-    ,
-    "15",
   ];
 
 
@@ -41,15 +38,18 @@ const gridContainer = document.querySelector('.grid-container')
     gridContainer.appendChild(gridItem)
   })
 
+  console.log(test);
+  
+
   return (
     <>
       <div className={"landing-" + styling}>
         <div className="grid-container">
-          {test.map((itemtest, index) => {
+          {/* {test.map((itemtest, index) => {
             <div key={index} classname="video-thumb">
               {itemtest}
-              </div>
-          })}
+            </div>;
+          })} */}
         </div>
       </div>
     </>
